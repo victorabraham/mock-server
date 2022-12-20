@@ -29,6 +29,16 @@ app.post('/api-proxy/service/identity/oauth/v1/token', async (req, res) => {
     `);
 });
 
+app.post('/api-proxy/service/supplychain/fulfillment/v1/faas/order/create', async (req, res) => {
+    res.setHeader('Content-Type', 'application/json');
+    res.send(`
+    {
+        "status": "ok",
+        "message": "success"
+    }
+    `);
+});
+
 app.listen(process.env.PORT || 3000, err => {
     console.log('listening');
 })
